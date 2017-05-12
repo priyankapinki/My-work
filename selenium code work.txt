@@ -1,0 +1,241 @@
+package seleniumbasics;
+
+
+	import java.util.List;
+
+   import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+     import org.openqa.selenium.WebElement;
+     import org.openqa.selenium.chrome.ChromeDriver;
+	
+	public class DropDowns {
+
+	public static void main(String[] args) 
+	{
+	System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+	WebDriver driver= new ChromeDriver();
+	driver.get("http://gmail.com");
+	driver.findElement(By.xpath("//*[@id='Email']")).sendKeys("priyankareddy8694@gmail.com");
+	driver.findElement(By.id("next")).click();
+	driver.findElement(By.xpath("//*[@id='Passwd']")).sendKeys("frooti888");
+	driver.findElement(By.id("next")).click();
+driver.findElement(By.xpath("//*[@id=':2x']/div[2]"));
+
+	List<WebElement> unread = driver.findElements(By.xpath(".//*[@id=':2x']/div[1]/div"));
+	unread.get(3).click();
+	}
+
+	}
+----------------------------------------------------------------------------------------------------------
+package seleniumbasics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class ExceptionInSelenium {
+
+	public static void main(String[] args)
+	{
+		/*They are many execptions in selenium and can be caught using try catch block
+		 * all the exceptions can be caught using catch(exeception e) below is an example of NoSuchElementException 
+		 * */
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://automationpractice.com/index.php");
+		try{ // actual id = search_query_top
+			driver.findElement(By.id("query_top")).sendKeys("this will not work");
+		}
+		catch(NoSuchElementException e)
+		{
+		System.out.println( "execption found and caught. This way it will not stop the execution of the program");	
+		}
+		driver.close();
+	}
+	
+}
+---------------------------------------------------------------------------------------------------------------------
+package seleniumbasics;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class ExplicitWait {
+public static void main(String[] args) {
+		
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://automationpractice.com/index.php");
+		driver.findElement(By.id("search_query_top")).sendKeys("dress");
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search_query_top")));
+	    //waits 10 seconds until the icon is visible
+	    driver.findElement(By.id("search_query_top")).click();
+	    driver.close();
+		
+}
+}
+----------------------------------------------------------------------------------------------------------------------
+package seleniumbasics;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+public class LoginPage {
+	WebDriver driver; 
+	By Username=By.id("user_login");
+	By password=By.xpath(".//*[@id='user_pass']");
+	By Login=By.name("wp-submit");
+	public LoginPage(WebDriver driver)
+{
+	this.driver = driver;
+}public void typeUsername()
+{
+driver.findElement(Username).sendKeys("admin");
+}
+public void typePassword()
+{
+driver.findElement(password).sendKeys("priyanka123");
+}
+public void clickOnLogin()
+{
+driver.findElement(Login).click();
+}
+}
+
+---------------------------------------------------------------------------------------------------------------------------
+package seleniumbasics;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class MultipleWindow {
+	public static void main(String[] args){
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.irctc.co.in/eticketing/loginHome.jsf");
+		//saving irctc window 
+		String mainWindow = driver.getWindowHandle();
+		//saving all the popups
+		Set<String> popups = driver.getWindowHandles();
+		for(String window: popups) //foreach loop
+		{
+			driver.switchTo().window(window);
+			driver.findElement(By.xpath(".//*[@id='demon_content']/div[2]/input")).click();
+		}
+		driver.findElement(By.xpath(".//*[@id='loginFormId']/div[1]/div[4]/div/ul/li[4]/a")).click();
+		Set<String> popup = driver.getWindowHandles();
+		for(String window: popup) //foreach loop
+		{
+			driver.switchTo().window(window);
+			System.out.println(driver.getTitle());
+		}
+		
+		//switching back to main window
+		driver.switchTo().window(mainWindow);
+		driver.findElement(By.id("usernameId")).sendKeys("Lavanya");
+		driver.quit();
+	}
+		
+	}
+-------------------------------------------------------------------------------------------------
+package seleniumbasics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
+public class VerifyLogin {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\priya\\Desktop\\selenium-java-2.53.1\\selenium-2.53.1\\libs");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.facebook.com/");
+		driver.findElement(By.id("email")).sendKeys("priyanka.8694.com");
+		driver.findElement(By.id("pass")).sendKeys("Password");
+		driver.findElement(By.id("u_0_n")).click();
+		
+	}
+	
+}
+--------------------------------------------------------------------------------------------------------------
+package seleniumbasics;
+
+
+	import java.util.List;
+    import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+     import org.openqa.selenium.WebElement;
+     import org.openqa.selenium.chrome.ChromeDriver;
+	
+	public class Task {
+
+	public static void main(String[] args) 
+	{
+	System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+	WebDriver driver= new ChromeDriver();
+	driver.get("http://gmail.com");
+	driver.findElement(By.xpath("//*[@id='Email']")).sendKeys("priyankareddy8694@gmail.com");
+	driver.findElement(By.id("next")).click();
+	driver.findElement(By.xpath("//*[@id='Passwd']")).sendKeys("frooti888");
+	driver.findElement(By.id("next")).click();
+driver.findElement(By.xpath("//*[@id=':2x']/div[2]"));
+
+	List<WebElement> unread = driver.findElements(By.xpath(".//*[@id=':2x']/div[1]/div"));
+	unread.get(3).click();
+	}
+
+	}
+------------------------------------------------------------------------------------------------------------------
+package seleniumbasics;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+public class TestNg {
+WebDriver d;
+@BeforeMethod
+public void openBrowser() throws Exception
+{
+	System.setProperty("webdriver.gecko.driver", "D:\\Selenium Jars\\selenium web drivers\\geckodriver.exe");
+
+	d= new FirefoxDriver();
+	Thread.sleep(2000);
+	System.out.println("Please Wait some time..");
+}
+@Test(priority=1)
+public void openfacebook1() throws Exception
+{
+	Thread.sleep(2000);
+	d.get("https://www.google.com/?gws_rd=ssl");
+	System.out.println("open google");
+	}
+@Test(priority=2)
+public void opengmail() throws Exception
+{
+	Thread.sleep(2000);
+	d.get("https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/%3Fgws_rd%3Dssl#identifier");
+	System.out.println("open gmail");
+}
+@Test(priority=3)
+public void openfacebook() throws Exception
+{
+	Thread.sleep(2000);
+	d.get("https://www.facebook.com/");
+	System.out.println("open facebook");
+}
+
+@AfterMethod
+public void CloseBrowser() throws Exception
+{
+	Thread.sleep(2000);
+	System.out.println("Browser Closed");
+	d.close();
+}	
+	
+}
+----------------------------------------------------------------------------------

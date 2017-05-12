@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConApp_4th_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /* int a, b, c;
+             Console.WriteLine("Enter an integer1 : " );
+             a = Convert.ToInt32(Console.ReadLine());
+             Console.WriteLine("Enter an integer2: ");
+             b = Convert.ToInt32(Console.ReadLine());
+             c = a;
+             a = b;
+             b = c;
+             Console.WriteLine("Integers after swap");
+             Console.WriteLine("INteger1 is:" +a);
+             Console.WriteLine("Integer2 is:" +b);
+             */
+
+            //3sub marks and its tot, avg 
+            /*
+            int m, p, c, tot;
+            double avg;
+            Console.WriteLine("Marks scored in math are:");
+            m = int.Parse(Console.ReadLine());
+            Console.WriteLine("Markes scored in Physics:");
+            p = int.Parse(Console.ReadLine());
+            Console.WriteLine("Marks scored in Chemistry:");
+            c = int.Parse(Console.ReadLine());
+            tot = m + p + c;
+            Console.WriteLine("Total marks scored are:" + tot);
+            avg = (double)tot / 3;
+            Console.WriteLine("Avg of three sub is: " +avg);
+            */
+
+            //Boxing and unboxing 
+            /*
+            string name = "Pinky";
+            Object o = name; //boxing
+            String s = (String)o; //unboxing dereferencing the same
+            Console.WriteLine(s);
+            */
+
+            //Convert string to int /*
+            String x = "100";
+            int n = int.Parse(x);
+            Console.WriteLine("Square of {0} is {1} ",n,n*n);
+
+            x = "19.19";
+            double d = double.Parse(x);
+            Console.WriteLine(x);
+
+
+            Console.ReadKey();
+        }
+    }
+}

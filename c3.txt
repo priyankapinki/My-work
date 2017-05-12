@@ -1,0 +1,163 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConApp5th
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //entered num is equal to zero or not
+            /*
+            Console.WriteLine("Enter an integer: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+          
+            if (n == 0)
+                Console.WriteLine("The num is Zero");
+            else        
+                Console.WriteLine("{0} is not equal to zero",n);
+   
+            //entered num is positive or not
+            if(n >0)
+                Console.WriteLine("{0} is positive",n);
+            else
+                Console.WriteLine("{0} is negative",n);
+            */
+
+            //enter marks and check they are in range of 0 to 100 or not
+            /*
+            int n;
+            Console.WriteLine("Enter sub marks: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            if (n >=0 && n<= 100)
+            {
+                Console.WriteLine("The eneterd marks are valid");
+            }
+            else
+                Console.WriteLine("MArks are not valid");
+                */
+
+            //check weather username and password are valid or not
+            /*
+            string uname = string.Empty;
+            string pswd = string.Empty;
+            Console.WriteLine("Enter uname: ");
+             uname = Console.ReadLine();
+            Console.WriteLine("Enter pswd: ");
+             pswd = Console.ReadLine();
+
+            if( uname == "Rama" && pswd == "seetha")
+                Console.WriteLine("Credentials authenticated ");
+            else
+                Console.WriteLine("INcorrect credentials");
+            */
+            //zero or +ve or  -ve
+            /*
+            int n;
+            Console.WriteLine("Enter an integer: ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            if(n==0)
+                Console.WriteLine("The entered number is Zero");
+            else if(n >= 0)
+                Console.WriteLine("The entered number is +ve");
+            else
+                Console.WriteLine("The entered number is -ve");
+            */
+
+            //read m,p,c display tot , avg, result
+            /*
+            int m, p, c, tot;
+            double avg;
+            string result, grade;
+            grade = string.Empty;
+            Console.WriteLine("Enter m marks: ");
+            m = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter p marks: ");
+            p = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter c marks: ");
+            c = Convert.ToInt32(Console.ReadLine());
+
+            tot = m + p + c;
+            Console.WriteLine("{0} is the total of 3sub",tot);
+            avg = (float)tot / 3;
+            Console.WriteLine("{0:0.00} is the avg of 3 sub",tot/3);
+            // if (m>=35 && p>=35 && c>=35)
+              // Console.WriteLine("result is PASS");
+             // else
+                // Console.WriteLine("result is FAIL");
+            
+            if (m <= 35 || p <= 35 || c <= 35)
+            {
+                result = "FAIL";
+                grade = "NA";
+
+            }
+            else
+            {
+                result = "PASS";
+                if (avg >= 75) grade = "A+";
+                else if (avg >= 60) grade = "A";
+                else if (avg >= 50) grade = "B";
+                else grade = "c";
+            }
+            Console.WriteLine("The result : {0}",result);
+            Console.WriteLine("The grade is: {0}",grade);
+            */
+            // Ascii
+            /*
+            Char ch;
+            Console.Write("Enter a letter: ");
+            ch = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine("Given letter is : {0} ", ch);
+            Console.WriteLine("{0} is the given num ascii",(int)ch);
+            */
+            // read ascii display letter
+            /*
+            int n;
+            Console.WriteLine("Eneter a number in range (0-255): ");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("{0} its letter is {1}",n,(char)n);
+            Console.WriteLine("{0} its nxt letter is {1}",n,(char)(n+1));
+            Console.WriteLine("{0} its prv. letter is {1}",n,(char)(n-1));
+            */
+            //read a num and disply the day
+            int n;
+            Console.WriteLine("Enter a no. to know the day: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            switch (n)
+            {
+                case 1:
+                    Console.WriteLine("Its monday");
+                    break;
+                case 2:
+                    Console.WriteLine("its tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("its wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("its thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("its friday");
+                    break;
+                case 6:
+                    Console.WriteLine("its saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("its sunday");
+                    break;
+           
+                default:
+                    Console.WriteLine("invalid input");
+                    break;
+            }
+
+            Console.ReadKey();
+        }
+    }
+}

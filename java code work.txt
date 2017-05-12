@@ -1,0 +1,197 @@
+
+
+
+package corejava;
+
+public class Employee {
+	private int Employeeno;
+	private String DOB ;
+	private String FirstName;
+	private String LastName;
+	private String gender;
+	private String hire_date;
+	public int getEmployeeno() {
+		return Employeeno;
+	}
+	public void setEmployeeno(int employeeno) {
+		Employeeno = employeeno;
+	}
+	public String getDOB() {
+		return DOB;
+	}
+	public void setDOB(String dOB) {
+		DOB = dOB;
+	}
+	public String getFirstName() {
+		return FirstName;
+	}
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
+	}
+	public String getLastName() {
+		return LastName;
+	}
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getHire_date() {
+		return hire_date;
+	}
+	public void setHire_date(String hire_date) {
+		this.hire_date = hire_date;
+	}
+	
+}
+
+-------------------------------------------------------------------------------------------------------------
+package corejava;
+
+public class ImplementingInterface implements Interface1 {
+
+		@Override
+		public void car() {              // must implement the unimplemented methods 
+			
+			System.out.println("volvo");
+		}
+
+		@Override
+		public void carColor() {
+			
+			System.out.println("Red");
+		}
+		public static void main(String[] args) {
+			ImplementingInterface obj = new ImplementingInterface();
+			System.out.print("Name of the car " );
+			obj.car();
+			System.out.print("Color ");
+			obj.carColor();
+			
+			
+		}
+
+	}
+
+---------------------------------------------------------------------------------------------------------
+package corejava;
+
+  import java.VoidMethod; // importing classes from other packages
+
+	public class ImportingFromOtherPackage {
+	VoidMethod obj = new VoidMethod();
+	public static void main(String[] args) {
+		
+	}
+
+	}
+
+---------------------------------------------------------------------------------------------------------
+package corejava;
+
+public class MethodWithReturn { 
+		String printString()
+		{
+			return "returning value";
+		}
+		
+		int printInt()
+		{
+			int k = 10;
+			return k; 
+		}
+
+		double printDouble(double d)
+		{
+			return d;
+		}
+		float printfloat()
+		{
+			float k = 3.8f;  
+			return k;
+		}
+		public static void main(String[] args) {
+			MethodWithReturn m = new MethodWithReturn();
+			 String val = m.printString();  
+			 System.out.println(val);
+			 System.out.println(m.printInt());
+			 double d = 2.9773;
+			 System.out.println(m.printDouble(d));
+			 
+			 
+		}
+	}
+
+------------------------------------------------------------------------------------------
+package corejava;
+
+public class ReturnAndParameter{
+
+String printString(String val)
+	{
+		return "hello"+val;
+	}
+	public static void main(String[] args) {
+		ReturnAndParameter obj = new ReturnAndParameter();
+		String val="Priyanka";
+		System.out.println(obj.printString(val));
+	}
+}
+----------------------------------------------------------------------------------------
+package corejava;
+
+public class StaticMethod {
+	static void Printit(){
+			System.out.println("this is a static method");
+		}
+		public static void main(String[] args) {
+			Printit(); // object is not created. static methods can be accessed directly
+		}
+
+	}
+-----------------------------------------------------------------------------------------------------
+package corejava;
+
+public class TryCatch {
+	public static void main(String[] args) {
+		int a= 10;
+		int b = 0,c;
+		try{		// try
+			c= a/b;
+			System.out.println(c);
+		}
+		catch(Exception e){ // catching when it fails 
+			System.out.println("RunTime error divide by zero");
+		}
+		finally {
+			System.out.println("finally block");
+		}
+	}
+}
+
+--------------------------------------------------------------------------------------
+package corejava;
+
+public class UsingString {
+	public static void main(String[] args) {
+		String value =  "Lavanya"; // gets already created value
+		// there is no append method. 
+	     value = value+" Saibersys"; //creates a new reference in the heap as it is immutable
+	     System.out.println("using String: "+value);
+	     StringBuffer value1 = new StringBuffer("appended ");
+	     value1.append("using append method"); // mutable
+	     System.out.println(" using string Buffer: "+value1);
+	     
+	     
+	     // using StringBuilder
+	     StringBuilder value2 = new StringBuilder("appended ");
+	     value2.append("using append method ");
+	     System.out.println("using StringBuilder: "+value2);
+	}
+
+}
+------------------------------------------------------------------------------------

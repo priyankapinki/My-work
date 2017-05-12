@@ -1,0 +1,343 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConAppCollections
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //check properties
+            /*
+            ArrayList items = new ArrayList();
+            Console.WriteLine("The capacity is: {0}",items.Capacity);
+            Console.WriteLine("count of elements: {0}",items.Count);
+            Console.WriteLine("is it fixed size or not? {0}",items.IsFixedSize);
+           */
+            //Check capacity 
+            /*ArrayList items = new ArrayList();
+              Console.WriteLine("capacity is: {0}", items.Capacity);
+              Console.WriteLine("count: {0}", items.Count);
+
+              items.Add("Pinky");
+              items.Add("Pinky");
+              items.Add("Pinky");
+              items.Add("Pinky");
+              items.Add("Pinky");
+              items.Add("Pinky");
+              items.Add("Pinky");
+              items.Add("Pinky");
+              items.Add("Pinky");
+
+              Console.WriteLine("capacity is: {0}", items.Capacity);
+              Console.WriteLine("count: {0}", items.Count);
+              */
+            //store any type of data
+            /*ArrayList items = new ArrayList();
+              Console.WriteLine("capacity: {0}", items.Capacity);
+              Console.WriteLine("count: {0}", items.Count);
+
+              items.Add("pinky");
+              items.Add('a');
+              items.Add(25);
+              items.Add(25.25);
+              items.Add(true);
+              for (int i = 0; i < items.Count; i++)
+              {
+                  Console.WriteLine(items[i]);
+              }
+              Console.WriteLine("count: {0}", items.Count);
+              Console.WriteLine("capacity: {0}", items.Capacity);
+              */
+            // usage of TrimToSize()
+
+            /*  ArrayList items = new ArrayList(100);
+                items.Add("Sona");
+                Console.WriteLine("CApacity is: {0}", items.Capacity);
+                Console.WriteLine("Count is: {0}", items.Count);
+
+                items.TrimToSize();
+                Console.WriteLine("Capacity is: {0}", items.Capacity);
+                Console.WriteLine("Count is: {0}", items.Count);
+                */
+
+            //Foreach loop
+            /*    int[] items = { 10, 20, 30, 40, 5 };
+                  String[] fruits = { "banana", "apple", "carrot", "strawberry", "rasberry" };
+
+                  foreach (int item in items)
+                  {
+                      Console.WriteLine(item);
+                  }
+                  foreach (String fruit in fruits)
+                  {
+                      Console.WriteLine(fruit);
+                  }  */
+            // Elements into array using loops
+            /*
+              ArrayList items = new ArrayList();
+              //Add items 
+              for (int i = 0; i <=10; i++)
+              {
+                  items.Add(i);
+              }
+              //display by using foreach
+              foreach (var item in items)
+              {
+                  Console.WriteLine(item);
+              }
+              */
+            //dispaly diff elements using foreach
+            /*
+             ArrayList items = new ArrayList();
+               items.Add("Sonu");
+               items.Add('s');
+               items.Add(23);
+               items.Add(23.3);
+               items.Add(true);
+            foreach (var item in items)
+            {
+                Console.WriteLine("the value is: {0} and its type is {1}", item, item.GetType());
+                
+            }
+              */
+            //insert items into array
+            /*ArrayList ABC = new ArrayList();
+               ABC.Add("Sonu");
+                ABC.Add('s');
+                ABC.Add(143);
+               ABC.Add(23.3);
+                ABC.Add(true);
+
+                ABC.Insert(1,"Sona");
+                ABC.Insert(2, "Love each other");
+                ABC.Remove('s');
+                ABC.RemoveAt(5);
+                Console.WriteLine("The elements are:");
+                foreach (var AB in ABC)
+                {
+                    Console.WriteLine(AB);
+                }
+                */
+            //Sorting
+            /* ArrayList items = new ArrayList();
+               items.Add(9);
+               items.Add(-2);
+               items.Add(3);
+               items.Add(0);
+
+
+               items.Sort();
+
+               foreach (var item in items)
+               {
+                   Console.WriteLine(item);
+               }
+               items.Reverse();
+               foreach (var item in items)
+               {
+                   Console.WriteLine(item);
+               }   */
+
+            //Fetch elements using IEnumerator
+
+            /*   int[] items = { 10, 20, 30, 40, 50 };
+
+                 IEnumerator i = items.GetEnumerator();
+                 while (i.MoveNext())
+                 {
+                     int x = Convert.ToInt32(i.Current);
+                     Console.WriteLine("{0}", x);
+                 }
+                 */
+            //var working
+            /*  var name = "Praneetha";
+                Console.WriteLine("The value is: {0} and the type is {1}", name, name.GetType());
+                var x = true;
+                Console.WriteLine("The value is: {0} and the type is {1}", x, x.GetType());
+                var a = 43;
+                Console.WriteLine("the value is: {0} and type is {1}", a, a.GetType());
+                var b = 43.33;
+                Console.WriteLine("the value is {0} and value is {1}", b, b.GetType());
+                */
+            //DICTONARY CLASS  1st way
+            /*  Dictionary<int, string> items = new Dictionary<int, String>();
+              items.Add(101, "pinky");
+              items.Add(102, "chinni");
+              items.Add(103, "Ammulu");
+              items.Add(104, "Pappa");
+              foreach (KeyValuePair<int, String> item in items)
+              {
+                  Console.WriteLine("{0} {1}",item.Key,item.Value);
+              }
+
+              //DICTONARY CLASS 2nd way
+              Dictionary<int, string> items1 = new Dictionary<int, String>();
+              items1.Add(101, "pinky");
+              items1.Add(102, "chinni");
+              items1.Add(103, "Ammulu");
+              items1.Add(104, "Pappa");
+              foreach (int item in items1.Keys)
+              {
+                  Console.WriteLine(items1 + " = " + items1[item]);
+              }
+              */
+            //initialize in single line
+            /*
+            var obj = new { name = "Praneetha", Age = "22", id = "991761", salary = "6000" };
+            Console.WriteLine("{0}\t {1}\t {2} \t {3}",obj.name,obj.Age,obj.id,obj.salary);
+            */
+            //array values of anonymus type
+            /*  var objects = new[] {
+                  new {name = "Srinivas Rao", Age = "47" , id = "991764", salary = "6000"},
+                  new {name = "Vedavathi", Age = "45" , id = "991763", salary = "6000"},
+                  new {name = "Thushara", Age = "17" , id = "991762", salary = "6000"},
+                  new {name = "Praneetha", Age = "22" , id = "991761", salary = "6000"},
+
+              };
+              foreach (var obj in objects)
+              {
+                  Console.WriteLine("{0}\t{1}\t{2}\t{3}",obj.name,obj.Age,obj.id,obj.salary);
+              }   
+              */
+
+            //Usage of hashtable get keys and values
+
+            /*    Hashtable x = new Hashtable();
+                x.Add(101, "Praneetha");
+                x.Add(102, "Thushara");
+                x.Add(103, "Vedavathi");
+                x.Add(104, "Srininvasarao");
+                x.Add(105, "Shetti's");
+
+                foreach (var key in x.Keys)
+                {
+                    Console.WriteLine(key.ToString());
+                }
+                foreach (var value in x.Values)
+                {
+                    Console.WriteLine(value);
+                }       */
+
+            //Hash table elements using dictionary
+            /*       Hashtable items = new Hashtable();
+                   items.Add(10, "sonu");
+                   items.Add(20, "Sona");
+                   items.Add(30, "Ammu");
+                   items.Add(40, "kanna");
+
+                   foreach (DictionaryEntry item in items)
+                   {
+                       Console.WriteLine(item.Key.ToString() + " is " + item.Value.ToString());
+                   }
+                   //by using sortedlist in place of hashtable we get o/p in given order
+                   SortedList h1 = new SortedList(); //returns values using insertion sort(small to big)
+
+                   h1.Add(10, "sonu");
+                   h1.Add(20, "Sona");
+                   h1.Add(30, "Ammu");
+                   h1.Add(40, "kanna");
+
+                   foreach (DictionaryEntry item in h1)
+                   {
+                       Console.WriteLine(item.Key.ToString() + " is " + item.Value.ToString());
+                       //or
+                       Console.WriteLine("{0} = {1}",item.Key.ToString(),item.Value.ToString());
+                   }           */
+
+            //using stack add and delete items and contains
+            /*     Stack item = new Stack();
+                 item.Push(100);
+                 item.Push(200);
+                 item.Push(300);
+                 item.Push(400);
+                 item.Push(500);
+                 Console.WriteLine("Count or display elements: {0}",item.Count);
+                 Console.WriteLine( item.Pop());
+                 Console.WriteLine( item.Pop());
+                 Console.WriteLine( item.Pop());
+                 Console.WriteLine("Count or display elements: {0}",item.Count);
+                 Console.WriteLine(item.Contains(400));  */
+
+            /*            //use this to display
+                        foreach (var it in item)
+                        {
+                            Console.WriteLine(it);
+                        }
+            */
+
+            //queue usage of add del and contains in queue
+
+            /*     Queue item = new Queue();
+                 item.Enqueue(10);
+                 item.Enqueue(20);
+                 item.Enqueue(30);
+                 item.Enqueue(40);
+                 item.Enqueue(50);
+
+                 for (int i = 0; i < 5; i++)
+                 {
+                     Console.WriteLine(item.Dequeue());
+                 }
+                 foreach (var it in item)
+                 {
+                     Console.WriteLine(it);
+                 }
+                 Console.WriteLine(item.Contains(10));
+                 Console.WriteLine(item.Contains(item));         */
+
+            //
+
+            /*    List<int> items = new List<int>() { 100,200};
+                items.Add(400);
+                items.Add(500);
+                items.Insert(2, 300);
+                items.Remove(300);
+                foreach (int item in items)
+                {
+                    Console.WriteLine(item);
+                }
+                List<string> fruits = new List<string>() { "apple", "banana" };
+                fruits.Add("peas");
+                fruits.Add("kewi");
+                fruits.Insert(2, "mango");
+                fruits.Remove("peas");
+                foreach (string fruit in fruits)
+                {
+                    Console.WriteLine(fruit);
+                }       */
+
+            //execptional handling
+            /*     //runtime error
+                 int a = 3;
+                 int b = 0;
+                 int c = a / b;
+                 Console.WriteLine(c);       */
+
+            //overflow execption    (format exception lo int unte o/p lo string evali)
+            /*   Console.WriteLine("Enter an integer: ");
+               int x = Convert.ToInt32(Console.ReadLine());
+               Console.WriteLine("The entered integer is: {0}",x);     */
+
+            //index out of range(range tarvata echanu akadad unadhe 4th value daka i gave 5)
+            /*   int[] items = { 1, 2, 3, 4, 5 };
+               Console.WriteLine(items[5]);        */
+
+            //self declared exceptions
+          /*  throw new DivideByZeroException();
+            throw new NullReferenceException();     */
+
+
+             
+
+            Console.ReadKey();
+            }
+                
+
+
+        }
+    }
+

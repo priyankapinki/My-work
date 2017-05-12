@@ -1,0 +1,110 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    public class PolymorphismClass
+    {
+         static void Main(string[] args)
+        {
+
+
+            for(int i =1; i < 100; i++)
+            {
+                Console.WriteLine(" print i value " + i);
+            }
+
+
+            //int i = 0;
+            //string j = "Selenium";
+
+            //var k = i;
+
+
+
+
+            //if (i == 10)
+            //{
+            //    Console.WriteLine("if i == 10 ");
+            //    Console.WriteLine("if i == 10 ");
+            //}
+            //else if( i == 20)
+            //{
+            //    Console.WriteLine("if i == 20 ");
+            //    Console.WriteLine("if i == 20 ");
+            //}
+            //else if (i == 30)
+            //{
+            //    Console.WriteLine("if i == 30 ");
+            //    Console.WriteLine("if i == 30 ");
+            //}
+            //else
+            //{
+            //    Console.WriteLine(" else  i == 10 ");
+            //}
+
+
+
+
+
+
+            //TestOverLoad obj = new TestOverLoad();
+
+            //obj.Add("Mansoor", "Ali");
+
+            //obj.Add("10", "20");
+
+            //obj.Add(30, 40);
+
+            //ClassOne objClassOne = new ClassOne();
+            //objClassOne.Print();
+
+            //ClassTwo objClassTwo = new ClassTwo();
+            //objClassTwo.Print();
+
+        }
+
+           public abstract class ClassOne
+          {
+            public  void Print()
+            {
+                Console.WriteLine("ClassOne Print");
+            }
+
+
+            public void Login()
+            {
+                Console.WriteLine("Login");
+            }
+
+            public void Prints();
+        }
+
+
+
+        public interface class ClassOneInterface
+        {
+            public void Print();
+
+
+            public void Login();
+
+            public void Prints();
+        }
+
+
+
+        public class ClassTwo  : ClassOne
+        {
+
+            public int i = 0;
+
+            public override void Print()
+            {
+                Console.WriteLine("ClassTwo Print");
+            }
+        }
+

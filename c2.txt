@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /* int a;     // Read an int and display its square
+             Console.Write("Enter an Integer ");
+             a = Convert.ToInt32(Console.ReadLine());
+
+             Console.Write("The square of {0} is {1} ",a,a*a);
+             Console.ReadKey(); */
+
+
+
+
+            /* int a, b;   //Read 2 no.s into 2 variables and display addition
+            Console.Write("Enter an integer1 ");
+            a = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("ENter an integer2 ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("The addition of {0} and {1} is {2}",a,b,a+b);
+            Console.ReadKey(); */
+
+            //to see ranges
+
+            /* Console.WriteLine("Finding the values of data types:");
+            Console.WriteLine("BYte ranges from {0} to {1}",Byte.MinValue,Byte.MaxValue);
+            Console.WriteLine("Short ranges from {0} to {1}", short.MinValue, short.MaxValue);
+            Console.WriteLine("Int ranges from {0} to {1}", int.MinValue, int.MaxValue);
+            Console.WriteLine("long ranges from {0} to {1}", long.MinValue, long.MaxValue);
+            Console.ReadKey(); */
+
+
+            int a = 5;
+            Console.WriteLine("Value is {0} and its type is {1}",a, a.GetType());
+
+            double d = 1.2;
+            Console.WriteLine("Value is {0} and its type is {1}",d, d.GetType());
+
+            char ch = 'p';
+            Console.WriteLine("value is {0} and its type is {1}",ch, ch.GetType());
+
+            bool status = false;
+            Console.WriteLine("Value is {0} and its type is {1}", status, status.GetType());
+
+            Console.ReadKey();
+        }
+    }
+}

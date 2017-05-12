@@ -1,0 +1,295 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConApp6th
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+            //print even nums 2,4,6,8,10
+            int i = 1; //i = 10;
+            while (i<=10) //while(i>=0)
+            {
+              if(i % 2 == 0) 
+              Console.WriteLine("{0}", i);
+              i++;  //i--;
+            }
+            */
+            //print 1 to 10
+            /*
+            int i = 1;
+            while (i<=10)
+            {
+                Console.WriteLine("{0}",i);
+                i++;
+            }
+            */
+            //display 10 num using for
+            /*
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.Write("{0} ",i);
+            }
+            */
+            //display tables for given integer till 10
+            /*
+            Console.Write("Enter an integer: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine("{0} * {1} = {2}",n,i,n*i);
+            }
+            */
+            //display char from int
+            /*
+            for (int i = 65; i <= 90; i++)
+            {
+                Console.Write("{0} ",(char)i);
+            }
+            Console.WriteLine("\nchar in reverse order are: ");
+            for (int i = 90; i >=65 ; i--)
+            {
+                Console.Write("{0} ",(char)i);
+            }
+            */
+            // showing the difference between WHILE AND DO..WHILE
+            /*
+            int i = 1;
+            Console.WriteLine("Executing using while");
+            while (i<=10)
+            {
+                Console.Write("{0} ",i);
+                i++;
+            }
+            Console.WriteLine("\nExecuting using do..while");
+            i = 1;
+            do
+            {
+                Console.Write("{0} ",i);
+                i++;
+
+            } while (i<=10);
+            */
+            //even no from m to n using nested
+            /*
+            Console.Write("Enter an integer m: ");
+            int m = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter an integer n: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            for (int i = m; i <=n ; i++)
+            {
+                if(i % 2 == 0)    // for odd if(i % 2 != 0)
+                    Console.Write("{0} ",i);
+            }
+            */
+            //factors of given no.
+            /*
+            Console.Write("Enter a number: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                if(n%i == 0)
+                Console.WriteLine("{0}",i);
+                
+            }
+            */
+            //Sum of 1 to 10 num
+            /*
+            int sum = 0;
+            for (int i = 0; i <= 10 ; i++)
+            {
+                sum = sum + i;
+            }
+            Console.WriteLine(sum);
+            */
+            //fibbonoci series
+            /*
+            int a = 0, b = 1, c = 0;
+            int len = 11;
+            Console.Write("{0} {1}",a,b);
+            for (int i = 2; i < len; i++)
+            {
+                c = a + b;
+                Console.Write(" {0}", c);
+                a = b;
+                b = c;
+            }
+            */
+            //prime or not
+            /*
+            Console.WriteLine("Enter an integer: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int c = 0;
+            for (int i = 1; i <= n ; i++)
+            {
+                if (n % i == 0)
+                    c++;
+            }
+            if (c==2)
+                Console.WriteLine("{0} is a prime no.",n);
+            else
+                Console.WriteLine("{0} is not a prime no.",n);
+                */
+
+            /*
+            //array declaration and mem allocation in int
+
+            int[] items = { 100, 200, 300, 400, 500 };
+            //int[] items = new int[5] { 100, 200, 300, 400, 500 };    //memory allocation and declaration
+
+            //items[0] = 100;
+            //items[1] = 200;
+            //items[2] = 300;
+            //items[3] = 400;
+            //items[4] = 500;
+            for (int i = 0; i < items.Length; i++)
+            {
+                Console.WriteLine("{0}", items[i]);
+            }
+            //Console.WriteLine("{0}",items[0]);
+            //Console.WriteLine("{0}", items[1]);
+            //Console.WriteLine("{0}", items[2]);
+            //Console.WriteLine("{0}", items[3]);
+            //Console.WriteLine("{0}", items[4]);
+            */
+
+            //arrays using strings
+            /*
+            string[] fruits = { "apple", "banana", "cherry", "carrot", "pineapple" };
+            for (int i = 0; i < fruits.Length; i++)
+            {
+                Console.WriteLine("{0} ", fruits[i]);
+            }   */
+
+            //aRRAY pROPERTIES
+            /*
+            int[] items = { 10, 20, 30, 40, 50, 60 };
+            Console.WriteLine("total no.of elements are {0}",items.Length);
+            Console.WriteLine("no.of dimensions are {0}",items.Rank);
+            Console.WriteLine("Is the array fixed or not? {0}",items.IsFixedSize);
+            Console.WriteLine("is the array readble only? {0}",items.IsReadOnly);
+             */
+            //checking ranks for diiferent dimensions
+            /*
+            int[] items = new int[2];
+            Console.WriteLine("Total no.of elements are {0}", items.Length);
+            Console.WriteLine("No.of dimensions are {0}", items.Rank);
+            int[,] items1 = new int[2, 2];
+            Console.WriteLine("Total no.of elements are {0}",items1.Length);
+            Console.WriteLine("No..of dimensions are {0}",items1.Rank);
+            int[,,] items2 = new int[2, 2, 2];
+            Console.WriteLine("Total no.of elements are {0}",items2.Length);
+            Console.WriteLine("No.of dimensions are {0}",ite                                                                                                                                                                                                                                                                                                                    ms2.Rank);
+            */
+            //display items using for,while,do..while loops in arrays
+            /*
+            int[] items = {10,100,1000,10000,100000 };
+            int i;
+            Console.WriteLine("Display items using for loop:");
+            for (i = 0; i < items.Length; i++)
+            {
+                Console.WriteLine("{0}",items[i]);
+            }
+            Console.WriteLine("Display items using while loop:");
+            i = 0;
+            while (i < items.Length)
+            {
+                Console.WriteLine("{0}",items[i]);
+                i++;
+            }
+            Console.WriteLine("Display items using do..while");
+            i = 0;
+            do
+            {
+                Console.WriteLine("{0}",items[i]);
+                i++;
+            } while (i<items.Length);
+            */
+            //display sum of elements in array
+            /*
+            int[] items = { 1, 2, 3, 4, 5, 6, 7, 8, 9,100 };
+            int sum = 0;
+            for (int i = 0; i < items.Length; i++)
+            {
+                sum = sum + items[i] ;
+            
+            }
+            Console.WriteLine("The sum of elemnts {0} ", sum);
+            */
+            //display biggest no.
+            /*int[] items = { 9, 5, 11,99, 4, 23 };
+            int big,i;
+            big = items[0];
+            i = 1;
+            do
+            {
+                if(items[i] > big)
+                {
+                    big = items[i];
+                   
+                }
+                i++;        
+            } while (i <items.Length);
+            Console.WriteLine("{0}",big);
+            */
+            //array in ascending order
+            /*int temp;
+            int[] Array = new int[5] {3,1,-1,0,9 };
+
+            for (int i = 0; i < Array.Length - 1; i++)
+            {
+
+                for (int j = i + 1; j < Array.Length; j++)
+                {
+                    if (Array[i] > Array[j])
+                    {
+
+                        temp = Array[i];
+                        Array[i] = Array[j];
+                        Array[j] = temp;
+
+                    }
+
+                }
+
+            }
+
+            Console.WriteLine("Sorted:");
+            for (int i = 0; i < Array.Length; i++)
+            {
+                Console.WriteLine("{0}",Array[i]);
+                
+            }
+            Console.WriteLine("2nd biggest no. is {0}",Array[3]);   */
+            
+            //insert element into particular pos
+
+           /* int[] items = new int[10];
+            items[0] = 10;
+            items[1] = 20;
+            items[2] = 30;
+            items[3] = 40;
+            items[4] = 50;
+            int pos = 3;
+            int item = 100;
+            for (int i = 5; i > pos; i--)
+            {
+                items[i] = items[i - 1];
+            }
+            items[pos] = item;
+            for (int i = 0; i < 6; i++)
+            {
+                Console.WriteLine("{0}",items[i]);
+            }   */
+            
+
+            Console.ReadKey();
+        }
+    }
+}
